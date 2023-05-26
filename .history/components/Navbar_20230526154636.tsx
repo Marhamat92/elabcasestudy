@@ -75,7 +75,7 @@ function Navbar({}: Props) {
     <nav
       className={`flex w-full justify-between items-center   
       font-inter fixed top-0 left-0 right-0 
-      text-white px-4 lg:px-10 py-5  z-50 ${
+      text-white px-10 py-5  z-50 ${
         windowScroll ? "bg-black" : "bg-transparent"
       }`}
     >
