@@ -4,10 +4,10 @@ type Props = {};
 
 function Slogan({}: Props) {
   return (
-    <div className='bg-transparent container mx-auto font-inter'>
+    <div className='bg-transparent container mx-auto font-inter flex justify-center'>
       <div
         className='grid grid-cols-3 mx-40 px-20  drop-shadow-2xl
-      py-20 z-50 relative  bg-white  -mt-40
+      py-20 z-5 relative  bg-white -mt-20  lg:-mt-40 gap-5
       '
       >
         <div className='col-span-3 lg:col-span-1 '>
@@ -16,7 +16,9 @@ function Slogan({}: Props) {
               <img src='safe.svg' className='' alt='' />
             </div>
             <div>
-              <p className=' text-mainRed font-bold text-2xl'>GÜVENİLİR</p>
+              <p className=' text-mainRed font-bold text-lg lg:text-2xl'>
+                GÜVENİLİR
+              </p>
             </div>
           </div>
         </div>
@@ -26,7 +28,9 @@ function Slogan({}: Props) {
               <img src='quality.svg' className='' alt='' />
             </div>
             <div>
-              <p className='  text-mainRed font-bold text-2xl'>KALİTELİ</p>
+              <p className='  text-mainRed font-bold text-lg lg:text-2xl'>
+                KALİTELİ
+              </p>
             </div>
           </div>
         </div>
@@ -36,7 +40,9 @@ function Slogan({}: Props) {
               <img src='correct.svg' className='' alt='' />
             </div>
             <div>
-              <p className='  text-mainRed font-bold text-2xl'>DOĞRU</p>
+              <p className='  text-mainRed font-bold text-lg lg:text-2xl'>
+                DOĞRU
+              </p>
             </div>
           </div>
         </div>

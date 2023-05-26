@@ -11,7 +11,7 @@ type Props = {};
 
 function Footer({}: Props) {
   return (
-    <div className='bg-black mt-20'>
+    <div className='bg-black mt-20 font-inter'>
       <div className='container px-4 mx-auto'>
         <div className='grid grid-cols-4 gap-16 py-12'>
           <div className='col-span-4 lg:col-span-1 '>

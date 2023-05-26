@@ -7,6 +7,7 @@ import AboutUs from "@/components/AboutUs";
 import Services from "@/components/Services";
 import Blogs from "@/components/Blogs";
 import Footer from "@/components/Footer";
+import Modal from "@/components/Modal";
 
 const inter = Inter({ subsets: ["latin"] });
 

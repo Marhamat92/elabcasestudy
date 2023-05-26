@@ -67,12 +67,12 @@ function Intro({}: Props) {
   };
 
   return (
-    <div className="bg-[url('/bg-image.png')]     bg-no-repeat w-full  bg-cover  py-96 overflow-hidden  relative     flex justify-center items-center font-inter">
+    <div className="bg-[url('/bg-image.png')]     bg-no-repeat w-full bg-cover   py-40    lg:py-96 overflow-hidden  relative     flex justify-center items-center font-inter">
       <div className='container'>
         <Slider {...settings}>
           <div className=''>
             <div className='flex flex-col justify-center items-center space-y-10 '>
-              <div className='flex items-center'>
+              <div className='flex items-center px-4 lg:px-64'>
                 <h1 className='text-2xl text-white font-medium text-center'>
                   TÜRKAK onaylı Akredite Kalibrasyon Laboratuvarı
                 </h1>
@@ -86,7 +86,7 @@ function Intro({}: Props) {
           </div>
           <div className=''>
             <div className='flex flex-col justify-center items-center space-y-10  '>
-              <div className='flex items-center px-64  '>
+              <div className='flex items-center px-4 lg:px-64  '>
                 <h1 className='text-2xl text-white font-medium text-center'>
                   Laboratuvarımız, TS EN ISO/IEC 17025 standardının
                   gerekliliklerini yerine getirerek TÜRKAK tarafından AB-0248-K
@@ -103,7 +103,7 @@ function Intro({}: Props) {
           </div>
           <div className=''>
             <div className='flex flex-col justify-center items-center space-y-10  '>
-              <div className='flex items-center px-12 lg:px-64'>
+              <div className='flex items-center px-4 lg:px-64'>
                 <h1 className='text-2xl text-white font-medium text-center'>
                   Türkak tarafından yapılan denetim sonucunda TS EN ISO/IEC
                   17025:2017 Standardına göre Detayda yer alan kapsamlarda
