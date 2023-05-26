@@ -1,7 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
 
 
 :root {
@@ -27,3 +30,32 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+/*  
+replace react slick arrows with new ones */
+.slick-prev:before,
+.slick-next:before {
+  color: rgb(var(--foreground-rgb));
+}
+
+.slick-prev:before {
+  content: "←";
+}
+
+.slick-next:before {
+  content: "→";
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 1;
+}
+
+.slick-prev {
+  left: 0;
+}
+
+.slick-next {
+  right: 0;
+}
+

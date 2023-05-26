@@ -54,12 +54,13 @@ function Navbar({}: Props) {
 
   return (
     <nav
-      className='flex w-full justify-between items-center fixed bg-black 
-      font-inter 
-      text-white px-10 py-5 z-50
+      className='flex w-full justify-between items-center   
+      font-inter absolute top-0 left-0 right-0 
+      text-white px-10 py-5  z-50
+      
     '
     >
-      <div>
+      <div className='flex'>
         <img src='logo.png' alt='e-lab image' />
       </div>
       <div className='flex space-x-8 items-center'>
@@ -70,18 +71,25 @@ function Navbar({}: Props) {
         </div>
         <div
           className='flex items-center space-x-1 relative'
-          onClick={() => setIsAboutUsOpen(!isAboutUsOpen)}
+          onClick={() => {
+            setIsAboutUsOpen(!isAboutUsOpen);
+            setIsCalibrationOpen(false);
+            setIsLanguageOpen(false);
+          }}
         >
           <a href='#' className='text-white text-lg font-bold'>
             HAKKIMIZDA
           </a>
           <IoIosArrowDown className='text-white' />
           {isAboutUsOpen && (
-            <div className='absolute top-10 left-0 bg-white   py-5 shadow-md'>
+            <div
+              className='absolute top-10 left-0 bg-white   py-5 shadow-md'
+              onMouseLeave={() => setIsAboutUsOpen(false)}
+            >
               {aboutUs.map((about) => (
                 <p
                   key={about.id}
-                  className='text-black text-md font-regular cursor-pointer mx-4 hover:text-mainRed transition-all duration-300 ease-in-out'
+                  className='text-black text-md font-regular cursor-pointer mx-4 hover:text-mainRed transition-all duration-300 ease-in-out py-2'
                 >
                   {about.name}
                 </p>
@@ -91,18 +99,25 @@ function Navbar({}: Props) {
         </div>
         <div
           className='flex items-center space-x-1 relative'
-          onClick={() => setIsCalibrationOpen(!isCalibrationOpen)}
+          onClick={() => {
+            setIsCalibrationOpen(!isCalibrationOpen);
+            setIsAboutUsOpen(false);
+            setIsLanguageOpen(false);
+          }}
         >
           <a href='#' className='text-white text-lg font-bold'>
             KALİBRASYONLAR
           </a>
           <IoIosArrowDown className='text-white' />
           {isCalibrationOpen && (
-            <div className='absolute top-10 left-0 bg-white  py-5 shadow-md'>
+            <div
+              className='absolute top-10 left-0 bg-white  py-5 shadow-md'
+              onMouseLeave={() => setIsCalibrationOpen(false)}
+            >
               {calibrations.map((calibration) => (
                 <p
                   key={calibration.id}
-                  className='text-black text-md font-regular cursor-pointer hover:text-mainRed transition-all duration-300 ease-in-out mx-2'
+                  className='text-black text-md font-regular cursor-pointer hover:text-mainRed transition-all duration-300 ease-in-out mx-2 py-2'
                 >
                   {calibration.name}
                 </p>
@@ -118,20 +133,27 @@ function Navbar({}: Props) {
       </div>
 
       <div className='flex items-center space-x-5'>
-        <div className='flex items-center space-x-1 relative'>
+        <div
+          className='flex items-center space-x-1 relative'
+          onClick={() => {
+            setIsLanguageOpen(!isLanguageOpen);
+            setIsAboutUsOpen(false);
+            setIsCalibrationOpen(false);
+          }}
+        >
           <p className='text-white text-lg font-bold cursor-pointer'>
             {selectedLanguage}
           </p>
-          <IoIosArrowDown
-            onClick={() => setIsLanguageOpen(!isLanguageOpen)}
-            className='cursor-pointer'
-          />
+          <IoIosArrowDown className='cursor-pointer' />
           {isLanguageOpen && (
-            <div className='absolute top-10 left-0 bg-white px-2 py-2 shadow-md'>
+            <div
+              className='absolute top-10 left-0 bg-white px-2 py-2 shadow-md'
+              onMouseLeave={() => setIsLanguageOpen(false)}
+            >
               {languages.map((language) => (
                 <p
                   key={language.id}
-                  className='text-black text-lg font-bold cursor-pointer hover:text-mainRed transition-all duration-300 ease-in-out'
+                  className='text-black text-lg font-bold cursor-pointer hover:text-mainRed transition-all duration-300 ease-in-out border-b-2 border-gray-200'
                   onClick={() => {
                     setSelectedLanguage(language.name);
                     setIsLanguageOpen(false);

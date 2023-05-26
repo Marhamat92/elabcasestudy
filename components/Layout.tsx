@@ -22,7 +22,7 @@ function Layout({ title, children }: Props) {
         <header>
           <Navbar />
         </header>
-        <main className='mt-4 mb-4'>{children}</main>
+        <main className=''>{children}</main>
       </div>
       <footer>
         <Footer />
